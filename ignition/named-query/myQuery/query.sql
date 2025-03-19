@@ -1,0 +1,1 @@
+SELECT {myColumn} FROM sqlth_te where id = :myID

@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2025-03-12T22:59:51Z"
+    },
+    "xml-format-version": 1,
+    "parameter-names": "LiquidValue,body",
+    "lastModificationSignature": "c39d734ea945ed46de7e08dd309556894ab2718a169e78f7ae7d53588fcde7a8"
+  }
+}

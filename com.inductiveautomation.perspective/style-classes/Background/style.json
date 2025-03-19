@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "#76EBDE",
+      "borderColor": "#E32825",
+      "borderStyle": "solid"
+    }
+  }
+}

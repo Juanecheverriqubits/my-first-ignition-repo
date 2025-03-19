@@ -1,0 +1,45 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "db_csv_data",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "f188ee9f45faabc61dec9aa89d4c402d68703a10f25e9034faa9df1d8dc87443",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2025-03-17T16:46:00Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "myID",
+        "sqlType": 7
+      },
+      {
+        "type": "QueryString",
+        "identifier": "myColumn",
+        "sqlType": 7
+      }
+    ]
+  }
+}

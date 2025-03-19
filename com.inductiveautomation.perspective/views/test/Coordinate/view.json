@@ -1,0 +1,95 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "height": 0.25,
+          "width": 0.25,
+          "x": 0.515,
+          "y": 0.6637
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Gauge"
+            },
+            "position": {
+              "height": 175,
+              "width": 300,
+              "x": 13.049999999999997,
+              "y": 7.969999999999999
+            },
+            "props": {
+              "backgroundColor": "",
+              "innerAxis": {
+                "data": "secondaryValue",
+                "maxValue": 80,
+                "percentRadius": 85,
+                "show": false,
+                "width": 1
+              },
+              "outerAxis": {
+                "data": "value",
+                "maxValue": 120,
+                "percentRadius": 100,
+                "ranges": [
+                  {
+                    "color": "#77B6D8",
+                    "end": 80,
+                    "start": 0,
+                    "width": 8
+                  },
+                  {
+                    "color": "#6E94D7",
+                    "end": 105,
+                    "start": 80,
+                    "width": 12
+                  },
+                  {
+                    "color": "#7A6BD5",
+                    "end": 120,
+                    "start": 105,
+                    "width": 16
+                  }
+                ],
+                "show": true,
+                "width": 1
+              }
+            },
+            "type": "ia.chart.gauge"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "height": 0.275,
+          "width": 0.47,
+          "x": 0.0349,
+          "y": 0.0375
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": -0.0125,
+      "y": -0.0088
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "color": "#D91B1B",
+      "fontFamily": "inherit",
+      "fontSize": "20px",
+      "fontWeight": "bold"
+    }
+  }
+}

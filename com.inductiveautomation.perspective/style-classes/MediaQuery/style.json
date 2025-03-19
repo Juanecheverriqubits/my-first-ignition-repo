@@ -1,0 +1,16 @@
+{
+  "base": {
+    "style": {}
+  },
+  "variants": [
+    {
+      "media": {
+        "feature": "maxWidth",
+        "value": "500px"
+      },
+      "style": {
+        "fontSize": "40px"
+      }
+    }
+  ]
+}

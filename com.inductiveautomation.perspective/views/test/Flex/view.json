@@ -1,0 +1,54 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 303
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "150px",
+          "shrink": 0
+        },
+        "props": {
+          "text": 1
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "text": 2
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Button_1"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "text": 3
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

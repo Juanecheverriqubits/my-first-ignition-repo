@@ -1,0 +1,812 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 799,
+      "width": 1239
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": [
+              {
+                "config": {
+                  "draggable": false,
+                  "id": "YWYvh2nj",
+                  "modal": false,
+                  "overlayDismiss": false,
+                  "resizable": true,
+                  "showCloseIcon": true,
+                  "title": "My title",
+                  "type": "open",
+                  "viewParams": {
+                    "display": "{/root/TextField.props.text}"
+                  },
+                  "viewPath": "Popup",
+                  "viewportBound": false
+                },
+                "scope": "C",
+                "type": "popup"
+              },
+              {
+                "config": {
+                  "script": "\t"
+                },
+                "scope": "G",
+                "type": "script"
+              }
+            ]
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 65,
+          "width": 155,
+          "x": 782.495,
+          "y": 481.6791875
+        },
+        "props": {
+          "text": "Popup"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "TextField"
+        },
+        "position": {
+          "height": 65,
+          "width": 155,
+          "x": 782.495,
+          "y": 411.6791875
+        },
+        "props": {
+          "placeholder": "Text for the popup"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "height": 73,
+          "width": 79,
+          "x": 37.28,
+          "y": 102.616375
+        },
+        "props": {
+          "path": "material/self_improvement"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "height": 54,
+          "width": 54,
+          "x": 151.097,
+          "y": 110.9915
+        },
+        "props": {
+          "source": "/system/images/Builtin/icons/48/workstation1.png"
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "LedDisplay"
+        },
+        "position": {
+          "height": 32,
+          "width": 128,
+          "x": 1026.4875,
+          "y": 448.66875000000005
+        },
+        "propConfig": {
+          "props.diodeOnColor": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]MySineTag"
+              },
+              "transforms": [
+                {
+                  "fallback": "#47FFFF",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "max": 5,
+                        "min": -5
+                      },
+                      "output": "#00D900"
+                    },
+                    {
+                      "input": {
+                        "max": -5,
+                        "min": -10
+                      },
+                      "output": "#FF0000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "expression": "abs({[default]MySineTag})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.led-display"
+      },
+      {
+        "meta": {
+          "name": "Slider"
+        },
+        "position": {
+          "height": 32,
+          "width": 192,
+          "x": 994.4875,
+          "y": 554.66875
+        },
+        "props": {
+          "value": 48
+        },
+        "type": "ia.input.slider"
+      },
+      {
+        "meta": {
+          "name": "NumericEntryField"
+        },
+        "position": {
+          "height": 32,
+          "width": 192,
+          "x": 994.4875,
+          "y": 517.66875
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "../Slider.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "LedDisplay_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 128,
+          "x": 1026.4875,
+          "y": 411.68674999999996
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "expression": "{[default]Liquid}+{[default]Tank 1/Liquid}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.led-display"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 27,
+          "width": 36,
+          "x": 1072.4875,
+          "y": 485.66875000000005
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Test/State"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "off"
+                    },
+                    {
+                      "input": 1,
+                      "output": "On"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 44,
+          "width": 37,
+          "x": 820.51,
+          "y": 570.66
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Liquid"
+              },
+              "transforms": [
+                {
+                  "code": "\t\n\tif value \u003e 100:\n\t\treturn \u0027too hot\u0027\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 79,
+          "width": 212,
+          "x": 753.990625,
+          "y": 619.64375
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Liquid"
+              },
+              "transforms": [
+                {
+                  "expression": "\"Current temperature \" + {value} + \" C\" ",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 63,
+          "width": 60,
+          "x": 56.50512500000001,
+          "y": 475.999625
+        },
+        "props": {
+          "style": {
+            "classes": "Background",
+            "color": "#26D427",
+            "fontFamily": "Helvetica",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          },
+          "text": "Style Test",
+          "textStyle": {
+            "classes": "Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 38,
+          "width": 73,
+          "x": 72.8825,
+          "y": 592.508125
+        },
+        "props": {
+          "style": {
+            "classes": "MediaQuery"
+          },
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "name": "dark-cool"
+              },
+              "scope": "C",
+              "type": "theme"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 34,
+          "width": 80,
+          "x": 36,
+          "y": 29
+        },
+        "props": {
+          "text": "Dark"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "name": "light"
+              },
+              "scope": "C",
+              "type": "theme"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_1"
+        },
+        "position": {
+          "height": 34,
+          "width": 80,
+          "x": 132.28125,
+          "y": 29
+        },
+        "props": {
+          "text": "Light"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "page": "/breakpoint"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_2"
+        },
+        "position": {
+          "height": 96,
+          "width": 178,
+          "x": 20.565625,
+          "y": 293.7625
+        },
+        "props": {
+          "text": "To Breakpoint"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "page": "/flex"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_3"
+        },
+        "position": {
+          "height": 96.07,
+          "width": 178.37,
+          "x": 20.546825,
+          "y": 192.7505
+        },
+        "props": {
+          "text": "To flex"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "north",
+                "type": "toggle"
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_4"
+        },
+        "position": {
+          "height": 37,
+          "width": 99,
+          "x": 0.0299999,
+          "y": 761.92
+        },
+        "props": {
+          "text": "Dock"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Map"
+        },
+        "position": {
+          "height": 289,
+          "width": 881,
+          "x": 288.31,
+          "y": 29.54
+        },
+        "props": {
+          "init": {
+            "center": {
+              "lat": 4.806131,
+              "lng": -75.685589
+            },
+            "zoom": 12
+          },
+          "layers": {
+            "raster": {
+              "tile": [
+                {
+                  "WMS": {
+                    "format": "image/jpeg",
+                    "layers": "",
+                    "styles": "",
+                    "transparent": false,
+                    "uppercase": false,
+                    "version": "1.1.1"
+                  },
+                  "options": {
+                    "attribution": "Map data \u0026copy; \u003ca href\u003d\u0027https://www.openstreetmap.org/\u0027\u003eOpenStreetMap\u003c/a\u003e contributors, \u003ca href\u003d\u0027https://creativecommons.org/licenses/by-sa/2.0/\u0027\u003eCC-BY-SA\u003c/a\u003e",
+                    "crossOrigin": false,
+                    "detectRetina": false,
+                    "errorTileUrl": "",
+                    "opacity": 1,
+                    "subdomains": [
+                      "a",
+                      "b",
+                      "c"
+                    ],
+                    "tileSize": {
+                      "height": 256,
+                      "width": 256
+                    },
+                    "tms": false,
+                    "update": {
+                      "interval": 200,
+                      "whenIdle": false,
+                      "whenZooming": true
+                    },
+                    "zIndex": 1,
+                    "zoom": {
+                      "max": 18,
+                      "min": 0,
+                      "native": {
+                        "max": null,
+                        "min": null
+                      },
+                      "offset": 0,
+                      "reverse": false
+                    }
+                  },
+                  "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  "urlTemplateParams": {}
+                }
+              ]
+            },
+            "ui": {
+              "marker": [
+                {
+                  "enabled": true,
+                  "event": {
+                    "stopPropagation": false
+                  },
+                  "icon": {
+                    "color": "#4190F7",
+                    "path": "material/location_on",
+                    "rotate": 0,
+                    "size": {
+                      "height": 36,
+                      "width": 36
+                    },
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "lat": 4.806131,
+                  "lng": -75.685589,
+                  "name": "QE",
+                  "opacity": 1,
+                  "popup": {
+                    "autoClose": true,
+                    "closeButton": true,
+                    "closeOnClick": null,
+                    "closeOnEscapeKey": true,
+                    "content": {
+                      "text": "",
+                      "view": {
+                        "params": {},
+                        "path": ""
+                      }
+                    },
+                    "enabled": false,
+                    "height": {
+                      "max": null
+                    },
+                    "pan": {
+                      "auto": true
+                    },
+                    "width": {
+                      "max": 300,
+                      "min": 50
+                    }
+                  },
+                  "properties": {},
+                  "tooltip": {
+                    "content": {
+                      "text": "",
+                      "view": {
+                        "params": {},
+                        "path": ""
+                      }
+                    },
+                    "direction": "auto",
+                    "opacity": 1,
+                    "permanent": false,
+                    "sticky": false
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "ia.display.map"
+      },
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "height": 258.64,
+          "width": 476.95,
+          "x": 204.61675,
+          "y": 333.46375
+        },
+        "propConfig": {
+          "props.series[0].data": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "endDate": "{../ChartRangeSelector.props.selectedRange.end}",
+                  "startDate": "{../ChartRangeSelector.props.selectedRange.start}"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "500",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "path": "[SQLite/ignition-desktop-6t3h4eu:default]sensor/sensor 1/mysinetag"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "series": [
+            {
+              "name": "SineData"
+            }
+          ]
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "meta": {
+          "name": "ChartRangeSelector"
+        },
+        "position": {
+          "height": 128,
+          "width": 477,
+          "x": 205.095,
+          "y": 594.9165625
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "10",
+                  "mostRecentUnits": "MIN"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": false,
+                  "rate": "30"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "500",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "path": "[SQLite/ignition-desktop-6t3h4eu:default]sensor/sensor 1/mysinetag"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "selectedRange": {
+            "end": {
+              "$": [
+                "ts",
+                0,
+                1741900907440
+              ],
+              "$ts": 1741900663153
+            },
+            "start": {
+              "$": [
+                "ts",
+                0,
+                1741900907440
+              ],
+              "$ts": 1741900375252
+            }
+          }
+        },
+        "type": "ia.chart.chartrangeselector"
+      },
+      {
+        "meta": {
+          "name": "Sine value"
+        },
+        "position": {
+          "height": 76,
+          "width": 259,
+          "x": 405.976,
+          "y": 723.06225
+        },
+        "propConfig": {
+          "props.params.tagName": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "isActive": false
+          },
+          "path": "Sine value"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "height": 36,
+          "rotate": {
+            "anchor": "50% 36%"
+          },
+          "width": 135,
+          "x": 264.54499999999996,
+          "y": 744.31525
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Sine 0",
+              "value": "Sine 0"
+            },
+            {
+              "label": "Sine 1",
+              "value": "Sine 1"
+            }
+          ],
+          "value": "Sine 1"
+        },
+        "type": "ia.input.dropdown"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 20.28125,
+      "y": -4.703125
+    },
+    "type": "ia.container.coord"
+  }
+}
